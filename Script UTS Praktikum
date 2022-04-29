@@ -1,0 +1,36 @@
+fun main(args:Array<String>){
+    //Nama  : Ahmad Yusup
+    //NIM   : 21.12.2107
+    //Kelas : 21S1SI04
+    println("Menghitung SPP Variabel Prodi SISTEM INFORMASI ANGKATAN 2021")
+    val nama : (String,String)->String = {namadepan : String, namabelakang : String
+    -> val namaMHS = "$namadepan $namabelakang"
+    namaMHS}
+
+    val namaMHS = nama("Ahmad","Yusup")
+        // Harga Per SKS = 150000
+    val HargaSKS = 150000
+
+    print("Masukan NIM : ")
+    val nim = readLine()!!
+    print("Masukan SKS : ")
+    val Sks = readLine()!!.toInt()
+    val hasil:Double
+    hasil= HargaSKS.toDouble()*Sks.toDouble()
+
+    println(" ")
+    println("Total SKS yang harus dibayarkan ")
+    print("Nama = $namaMHS")
+    print(" ")
+    println("NIM = $nim")
+    print("Jumlah SKS = $Sks")
+    print(" ")
+    when(Sks){
+        24-> println(" Total Tagihan = $hasil")
+        22-> println(" Total Tagihan = $hasil")
+        18-> println(" Total Tagihan = $hasil")
+        else-> println(" Anda Salah Memasukan Jumlah SKS")
+    }
+}
+
+
